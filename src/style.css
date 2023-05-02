@@ -1,6 +1,7 @@
 html {
-    background-image: url("Imagen/Fondo3.png");
+    background-image: url("Imagen/fondo\ 4.png");
     background-repeat: no-repeat;
+    background-size: cover;
        }
 h1{
     color:white ;
