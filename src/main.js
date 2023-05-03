@@ -1,28 +1,24 @@
 //import pokemon from './data/pokemon/pokemon.js';
-import pokemon from './data/pokemon/pokemon.js';
+import data from './data/pokemon/pokemon.js';
 //import data from './data/pokemon/pokemon.js'
 
-//import { example } from './data.js';
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
 
-//data.pokemon.forEach(pokemon => {
-//console.log(pokemon)
-//})
+//cree una constante con los pokemon de la data y con el for recorro los pokemones
+console.log(data)
+const pokemon = data.pokemon;
+const root = document.getElementById("root");
 
-//function showPokemon (pokemon) {
-//  const allCards = data.map(item); {
-//    `${item.num}` `${item.name}` `${item.img}`}
-//};     
-//  .join("")
-//  showPokemon (data.pokemon);
-//const pokemon= [];
-const result = pokemon.filter function (pokemonfilter (pokemon) => {
-  pokemon.lenght
-});
-console.log(result);
+for (let i = 0; i < pokemon.length; i++) {
+  console.log("name: " + pokemon[i].name + "imagen: " + pokemon[i].img);
+  const imagenPokemon = document.createElement ("img");
+  imagenPokemon.src = pokemon[i].img;
+  const nombrePokemon = document.createTextNode ("name");
+  //nombrePokemon.name = pokemon[i].name;
+  //root.appendChild(nombrePokemon);
+
+  root.appendChild(imagenPokemon);
+  }
 
 
 
