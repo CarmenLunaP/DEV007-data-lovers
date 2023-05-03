@@ -1,17 +1,40 @@
+
+@font-face {
+    font-family: 'Pokemon Solid';
+    src: url('Font/Pokemon\ Solid.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: 'Pokemon Hollow';
+    src: url('Font/Pokemon\ Hollow.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
 html {
     background-image: url("Imagen/fondo\ 4.png");
     background-repeat: no-repeat;
     background-size: cover;
        }
 h1{
-    color:white ;
-    font-size: 25px;
+    font-family: "Pokemon Hollow";
+    letter-spacing: 4px;
+    color: black ;
+    font-size: 35px;
     text-align: center;
     font-style: italic;
 }
 p {
-    color:white ;
-    font-size: 20px;
+    font-family: "Pokemon solid";
+    letter-spacing: 3px;
+    color:black;
+    font-size: 25px;
     text-align: center;
     font-style:
+}
+
+.header {
+
+    
 }
