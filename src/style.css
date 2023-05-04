@@ -16,14 +16,24 @@ html {
     background-image: url("Imagen/fondo\ 4.png");
     background-repeat: no-repeat;
     background-size: cover;
-       }
+    }
+.header-container {
+    background-color: #86B8FF;
+    padding: 10px;
+    size: 0px;
+    box-sizing:border-box;
+    }
+
+#logo {
+      float: left;
+    }  
+
 h1{
     font-family: "Pokemon Hollow";
     letter-spacing: 4px;
     color: black ;
     font-size: 35px;
-    text-align: center;
-    font-style: italic;
+    text-align: right;
 }
 p {
     font-family: "Pokemon solid";
@@ -31,10 +41,50 @@ p {
     color:black;
     font-size: 25px;
     text-align: center;
-    font-style:
+  }
+.galeria-img{
+  border: 3px solid #ECBC09;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  background-color: white;
+  width: 70px;
+	height: 70px;
+	object-fit: cover;
 }
 
-.header {
-
-    
+.container {
+display: flex;
+flex-wrap: wrap;
 }
+
+#root {
+  flex: 75%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 25%;
+  height: 400px;
+  background-color: aqua;
+}
+
+@media screen (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+/* #root.column {
+  flex:20%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+#root.column.galeria-img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}*/
+

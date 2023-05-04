@@ -14,6 +14,7 @@ for (let i = 0; i < pokemon.length; i++) {
   //console.log("name: " + pokemon[i].name + "imagen: " + pokemon[i].img);
   const imagenPokemon = document.createElement ("img"); //muestro las imagenes
   imagenPokemon.src = pokemon[i].img;
+  imagenPokemon.classList.add("galeria-img");
   root.appendChild(imagenPokemon);
 
   const nombrePokemon = document.createTextNode ("name"); //muestro los nombres
