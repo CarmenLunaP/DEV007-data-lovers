@@ -2,12 +2,26 @@
 import data from './data/pokemon/pokemon.js';
 //import data from './data/pokemon/pokemon.js'
 
-
+function showOnCards(data) {
+  document.getElementById("pokemon-cards").innerHTML = data.map((item) =>
+    ` <div class="content-card">
+         <div class="card">
+            <div><img class="pokemon-img" src="${item.img}" alt="Imagen de pokemon"></div>
+            <div class="pokemon-name">${item.name}</div>
+            <div class="pokemon-num">${item.num}</div>
+            <div class="pokemon-type">${item.type}</div>
+          </div>
+       </div>
+  `
+  )
+    .join("");
+}
+showOnCards(data.pokemon);
 
 //cree una constante con los pokemon de la data y con el for recorro los pokemones
 //console.log(data)
 
-const pokemon = data.pokemon;
+/*const pokemon = data.pokemon;
 const root = document.getElementById("root");
 
 for (let i = 0; i < pokemon.length; i++) {
@@ -25,27 +39,7 @@ for (let i = 0; i < pokemon.length; i++) {
 //numPokemon.nodeValue = pokemon[i].num;
 //root.appendChild(numPokemon);
  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}*/
 
 //console.log(data);
 

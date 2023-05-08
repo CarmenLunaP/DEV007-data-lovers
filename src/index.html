@@ -18,17 +18,19 @@
   <body>
     <p>Aquí encontrarás una colección increíble de imágenes y recursos de tus personajes favoritos de Pokemon. ¡Explora y diviértete!</p>
       <div class="container">
-      <aside>
-        <h2 class="filter">Tipo</h2>
-        <h3>Axxxxxx</h3>
-        <h3>Bxxxx</h3>
-        <h3>Cxxxxxx</h3>
-        <h2>Poder</h2>
-        <h3>Axxxxx</h3>
-        <h3>Bxxxxx</h3>
-        <h3>Cxxxxxx</h3>
-      </aside>
-      <section id="root"> </section>
+        <div class = "container-filter">
+          <h2>Tipos de pokemon</h2>
+          <label for="type">Selecciona aquí:</label>
+<select name="type" id="type">
+  <option value="normal">Normal</option>
+  <option value="grass">Grass</option>
+  <option value="poison">Poison</option>
+  <option value="water">Water</option>
+</select>
+        </div>
+        <div class="container-cards"> 
+          <div class="pokemon-cards" id="pokemon-cards"></div>
+        </div>
       </div>
        <script src="main.js" type="module"></script>
   </body>
