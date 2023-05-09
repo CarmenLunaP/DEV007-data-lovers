@@ -7,7 +7,7 @@ function showOnCards(data) {
          <div class="card">
             <div><img class="pokemon-img" src="${item.img}" alt="Imagen de pokemon"></div>
             <div class="pokemon-name">${item.name}</div>
-            <div class="pokemon-num">${item.num}</div>
+            <div class="pokemon-num"> # ${item.num}</div>
             <div class="pokemon-type">${item.type}</div>
           </div>
        </div>

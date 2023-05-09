@@ -45,32 +45,44 @@ p {
   .content-card {
     border: 8px solid #ECBC09;
     display: flex;
-    padding: 5%;
-    margin: 5%;
+    padding: 3%;
+    margin: 3%;
     background-color: #417DC1;
-    width: 200px;
-    height: 250px;
+    width: 100px;
+    height: 150px;
   }
   .pokemon-img{
     border: 5px solid #ECBC09;
     display: flex;
-    padding: 15%;
+    padding: 0%;
     justify-content: center;
     background-color: white;
     width: 100px;
     height: 100px;
     object-fit: cover;
-    margin: 5%;
+    margin: 0%;
   }
   .pokemon-name{
     display:flex;
     color: #B1E46B ;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     padding: 3%;
   }
   
+  .pokemon-type {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 15px;
+
+  }
+  .pokemon-num {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 15px;
+
+  }
 
 .galeria-img{
   border: 3px solid #ECBC09;
@@ -126,6 +138,9 @@ label{
   flex:20%;
   max-width: 25%;
   padding: 0 4px;
+}
+/*.imagen-footer {
+
 }
 /*#root.column.galeria-img {
   margin-top: 8px;
