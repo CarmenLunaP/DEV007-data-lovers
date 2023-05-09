@@ -91,25 +91,43 @@ flex-wrap: wrap;
 
 .container-filter {
   flex: 25%;
-}
+  background-color: white;
+ }
 
 .container-cards {
   flex: 75%;
   display: flex;
   flex-wrap: wrap;
+  }
+h2{
+  background-color: #B1E46B;
+  height: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-align: center;
+}
+select{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  color: #417DC1;
+}
+label{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  color: #417DC1;
 }
 
 /*@media screen (max-width: 700px) {
   .row {
     flex-direction: column;
   }
-}
-/* #root.column {
+}*/
+.container-cards.column{
   flex:20%;
   max-width: 25%;
   padding: 0 4px;
 }
-#root.column.galeria-img {
+/*#root.column.galeria-img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;

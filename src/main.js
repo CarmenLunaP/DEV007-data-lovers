@@ -1,6 +1,5 @@
-//import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-//import data from './data/pokemon/pokemon.js'
+import {selecType} from './data.js';
 
 function showOnCards(data) {
   document.getElementById("pokemon-cards").innerHTML = data.map((item) =>
@@ -17,6 +16,38 @@ function showOnCards(data) {
     .join("");
 }
 showOnCards(data.pokemon);
+
+const typeselect=document.getElementById("type");
+typeselect.addEventListener("change",()=>{
+  const selectvalue= selecType.value;
+  //selecType(data, selectvalue);
+  //console.log(selectvalue);
+  return (selectvalue);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //cree una constante con los pokemon de la data y con el for recorro los pokemones
 //console.log(data)
