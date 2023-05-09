@@ -17,14 +17,22 @@ function showOnCards(data) {
 }
 showOnCards(data.pokemon);
 
-const typeselect=document.getElementById("type");
+/*const typeselect=document.getElementById("type");
 typeselect.addEventListener("change",()=>{
-  const selectvalue= selecType.value;
+  const selectvalue= typeselect.value;
+  function selecType (selectvalue) {
   //selecType(data, selectvalue);
   //console.log(selectvalue);
-  return (selectvalue);
+  return selectvalue (selectvalue);
+  }
 })
-
+selecType (selectvalue);*/
+const typeselect = document.getElementById("type");
+typeselect.addEventListener("change", () => {
+  const selectvalue = typeselect.value;
+  const dataFiltered = selecType(data, selectvalue);
+  console.log(dataFiltered);
+});
 
 
 
