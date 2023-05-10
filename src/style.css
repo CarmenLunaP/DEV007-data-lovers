@@ -139,6 +139,11 @@ label{
   max-width: 25%;
   padding: 0 4px;
 }
+
+#imagen-footer {
+  float: right;
+}  
+
 /*.imagen-footer {
 
 }

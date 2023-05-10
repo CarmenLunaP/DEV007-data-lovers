@@ -1,6 +1,6 @@
 import data from './data/pokemon/pokemon.js';
 import {selecType} from './data.js';
-
+ //Mostramos las tarjetas de pokemon en pantalla
 function showOnCards(data) {
   document.getElementById("pokemon-cards").innerHTML = data.map((item) =>
     ` <div class="content-card">
@@ -17,26 +17,18 @@ function showOnCards(data) {
 }
 showOnCards(data.pokemon);
 
-/*const typeselect=document.getElementById("type");
-typeselect.addEventListener("change",()=>{
-  const selectvalue= typeselect.value;
-  function selecType (selectvalue) {
-  //selecType(data, selectvalue);
-  //console.log(selectvalue);
-  return selectvalue (selectvalue);
-  }
-})
-selecType (selectvalue);*/
+//filtrado por typo de pokemon
 const typeselect = document.getElementById("type");
 typeselect.addEventListener("change", () => {
   const selectvalue = typeselect.value;
-  const dataFiltered = selecType(data, selectvalue);
-  console.log(dataFiltered);
+  const dataFiltered = selecType(data.pokemon, selectvalue);
+  //console.log(dataFiltered);
+  showOnCards(dataFiltered);
 });
 
+//filtrado por peso resistant
 
-
-
+//filtrado por peso weaknesses
 
 
 
