@@ -115,14 +115,16 @@ flex-wrap: wrap;
 /*lado inzquierdo*/
 .container-filter {
   flex: 25%;
-  background-color: white;
+  background-color: #F8F9F9;
  }
 
  h2{
+  margin: 0%;
   background-color: #B1E46B;
   height: 30px;
   font-family: 'Courier New', Courier, monospace;
   color: white;
+  -webkit-text-fill-color: #2d5481;
   text-align: center;
 }
 
@@ -131,6 +133,7 @@ label{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
   color: #417DC1;
+  margin-left: 10px;
 }
 
 /*Lista desplegable*/
@@ -138,6 +141,7 @@ select{
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   color: #417DC1;
+  margin-left: 20px;
 }
 
 /*lado derecho*/
@@ -154,10 +158,14 @@ select{
   padding: 0 4px;
 }
 
-#imagen-footer {
+.imagen-footer {
   float: right;
+  
 }  
+.foot{
+  background-color: #417DC1;
 
+}
 /*.imagen-footer {
 
 }

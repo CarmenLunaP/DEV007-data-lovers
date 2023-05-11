@@ -36,18 +36,18 @@ const orderselectaz = document.getElementById("name");
 orderselectaz.addEventListener("change", () => {
   const selectnameaz = orderselectaz.value;
   const dataOrderedaz = sortAZ(data.pokemon, selectnameaz);
-  //console.log(dataOrdered);
+  console.log(dataOrderedaz);
   showOnCards(dataOrderedaz);
 });
 
-//Ordenar de la Z-A
+/*//Ordenar de la Z-A
 const orderselectza = document.getElementById("name");
 orderselectza.addEventListener("change", () => {
   const selectnameza = orderselectza.value;
   const dataOrderedza = sortZA(data.pokemon, selectnameza);
-  //console.log(dataOrdered);
+  //console.log(dataOrderedza);
   showOnCards(dataOrderedza);
-});
+});*/
 
 
 
