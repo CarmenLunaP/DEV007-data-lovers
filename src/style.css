@@ -1,11 +1,12 @@
 
+/*Fuentes de pokemon*/
 @font-face {
     font-family: 'Pokemon Solid';
     src: url('Font/Pokemon\ Solid.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
   }
-  @font-face {
+@font-face {
     font-family: 'Pokemon Hollow';
     src: url('Font/Pokemon\ Hollow.ttf') format('truetype');
     font-style: normal;
@@ -17,6 +18,8 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     }
+    
+/*Menbrete de la pag -logo y eslogan*/  
 .header-container {
     background-color: #86B8FF;
     padding: 10px;
@@ -29,19 +32,26 @@ html {
     }  
 
 h1{
-    font-family: "Pokemon Hollow";
-    letter-spacing: 4px;
-    color: black ;
-    font-size: 35px;
+    font-family: "Pokemon solid";
+    letter-spacing: 5px;
+    font-size: 40px;
     text-align: right;
+    -webkit-text-fill-color: #ECBC09;
+    -webkit-text-stroke: 2px #053061;
+    
 }
+/*Mensaje de bienvenida*/
 p {
     font-family: "Pokemon solid";
     letter-spacing: 3px;
     color:black;
     font-size: 25px;
     text-align: center;
+    -webkit-text-fill-color: #2d5481;
+    -webkit-text-stroke: 1px #ECBC09;
   }
+
+  /*tarjetas pokemon*/
   .content-card {
     border: 8px solid #ECBC09;
     display: flex;
@@ -84,7 +94,7 @@ p {
 
   }
 
-.galeria-img{
+/*.galeria-img{
   border: 3px solid #ECBC09;
   display: flex;
   padding: 15px;
@@ -93,47 +103,51 @@ p {
   width: 70px;
 	height: 70px;
 	object-fit: cover;
-}
+}*/
 
+/*Contenedor del cuerpo de la página filter y tarjetas*/
 .container {
 flex: 100%;  
 display: flex;
 flex-wrap: wrap;
 }
 
+/*lado inzquierdo*/
 .container-filter {
   flex: 25%;
   background-color: white;
  }
 
-.container-cards {
-  flex: 75%;
-  display: flex;
-  flex-wrap: wrap;
-  }
-h2{
+ h2{
   background-color: #B1E46B;
   height: 30px;
   font-family: 'Courier New', Courier, monospace;
   color: white;
   text-align: center;
 }
-select{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
-  color: #417DC1;
-}
+
+/*indicacion de "selecciona aqui"*/
 label{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
   color: #417DC1;
 }
 
-/*@media screen (max-width: 700px) {
-  .row {
-    flex-direction: column;
+/*Lista desplegable*/
+select{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: #417DC1;
+}
+
+/*lado derecho*/
+.container-cards {
+  flex: 75%;
+  display: flex;
+  flex-wrap: wrap;
   }
-}*/
+
+
 .container-cards.column{
   flex:20%;
   max-width: 25%;
@@ -154,3 +168,9 @@ label{
   height: auto;
 }*/
 
+
+@media screen (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}

@@ -19,12 +19,12 @@
     <p>Aquí encontrarás una colección increíble de imágenes y recursos de tus personajes favoritos de Pokemon. ¡Explora y diviértete!</p>
       <div class="container">
         <div class = "container-filter">
-          <h2>Tipos de pokemon</h2>
-          <label for="type">Selecciona aquí:</label><br>
+          <h2>Filtra tus Pokemon</h2>
+          <label for="type">Selecciona el tipo de pokemon:</label><br>
             <select name="type" id="type">
+            <option value="-----">-----</option>
             <option value="normal">Normal</option>
             <option value="Fighting">Fighting</option>
-            <option value="Flying">Flying</option>
             <option value="Poison">Poison</option>
             <option value="Ground">Ground</option>
             <option value="Rock">Rock</option>
@@ -40,11 +40,19 @@
             <option value="Dragon">Dragon</option>
             <option value="Dark">Dark</option>
             <option value="Fairy">Fairy</option>
-          </select>
+            </select>
+          <div>
+            <h2>Ordena tus Pokemon</h2>
+            <label for="Order">Ordena:</label><br>
+              <select name="name" id="name">
+                <option value="-----">-----</option>
+                <option value="A-Z">A-Z</option>
+                <option value="Z-A">Z-A</option>
+              </select>
+          </div>
         </div>
         <div id="pokemon-cards" class="container-cards"> 
         </div>
-       
       </div>
        <script src="main.js" type="module"></script>
   </body>

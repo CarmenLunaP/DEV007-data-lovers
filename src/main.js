@@ -1,6 +1,7 @@
 import data from './data/pokemon/pokemon.js';
-import {selecType} from './data.js';
- //Mostramos las tarjetas de pokemon en pantalla
+import {selecType, selectname1, sortAZ, sortZA} from './data.js';
+
+//Mostramos las tarjetas de pokemon en pantalla
 function showOnCards(data) {
   document.getElementById("pokemon-cards").innerHTML = data.map((item) =>
     ` <div class="content-card">
@@ -30,7 +31,23 @@ typeselect.addEventListener("change", () => {
 
 //filtrado por peso weaknesses
 
+//Ordenar de la A-Z
+const orderselectaz = document.getElementById("name");
+orderselectaz.addEventListener("change", () => {
+  const selectnameaz = orderselectaz.value;
+  const dataOrderedaz = sortAZ(data.pokemon, selectnameaz);
+  //console.log(dataOrdered);
+  showOnCards(dataOrderedaz);
+});
 
+//Ordenar de la Z-A
+const orderselectza = document.getElementById("name");
+orderselectza.addEventListener("change", () => {
+  const selectnameza = orderselectza.value;
+  const dataOrderedza = sortZA(data.pokemon, selectnameza);
+  //console.log(dataOrdered);
+  showOnCards(dataOrderedza);
+});
 
 
 
