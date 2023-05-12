@@ -1,124 +1,117 @@
-
 /*Fuentes de pokemon*/
 @font-face {
-    font-family: 'Pokemon Solid';
-    src: url('Font/Pokemon\ Solid.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-  }
+  font-family: 'Pokemon Solid';
+  src: url('Font/Pokemon\ Solid.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
 @font-face {
-    font-family: 'Pokemon Hollow';
-    src: url('Font/Pokemon\ Hollow.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-  }
+  font-family: 'Pokemon Hollow';
+  src: url('Font/Pokemon\ Hollow.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
 
 html {
-    background-image: url("Imagen/fondo\ 4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    }
-    
-/*Menbrete de la pag -logo y eslogan*/  
+  background-image: url("Imagen/fondo\ 4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*Menbrete de la pag -logo y eslogan*/
 .header-container {
-    background-color: #86B8FF;
-    padding: 10px;
-    size: 0px;
-    box-sizing:border-box;
-    }
+  background-color: #86B8FF;
+  padding: 10px;
+  size: 0px;
+  box-sizing: border-box;
+}
 
 #logo {
-      float: left;
-    }  
-
-h1{
-    font-family: "Pokemon solid";
-    letter-spacing: 5px;
-    font-size: 40px;
-    text-align: right;
-    -webkit-text-fill-color: #ECBC09;
-    -webkit-text-stroke: 2px #053061;
-    
+  float: left;
 }
+
+h1 {
+  font-family: "Pokemon solid";
+  letter-spacing: 5px;
+  font-size: 40px;
+  text-align: right;
+  -webkit-text-fill-color: #ECBC09;
+  -webkit-text-stroke: 2px #053061;
+
+}
+
 /*Mensaje de bienvenida*/
 p {
-    font-family: "Pokemon solid";
-    letter-spacing: 3px;
-    color:black;
-    font-size: 25px;
-    text-align: center;
-    -webkit-text-fill-color: #2d5481;
-    -webkit-text-stroke: 1px #ECBC09;
-  }
+  font-family: "Pokemon solid";
+  letter-spacing: 3px;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  -webkit-text-fill-color: #2d5481;
+  -webkit-text-stroke: 1px #ECBC09;
+}
 
-  /*tarjetas pokemon*/
-  .content-card {
-    border: 8px solid #ECBC09;
-    display: flex;
-    padding: 3%;
-    margin: 3%;
-    background-color: #417DC1;
-    width: 100px;
-    height: 150px;
-  }
-  .pokemon-img{
-    border: 5px solid #ECBC09;
-    display: flex;
-    padding: 0%;
-    justify-content: center;
-    background-color: white;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin: 0%;
-  }
-  .pokemon-name{
-    display:flex;
-    color: #B1E46B ;
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 3%;
-  }
-  
-  .pokemon-type {
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    font-size: 15px;
-
-  }
-  .pokemon-num {
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    font-size: 15px;
-
-  }
-
-/*.galeria-img{
-  border: 3px solid #ECBC09;
+/*tarjetas pokemon*/
+.content-card {
+  border: 8px solid #ECBC09;
   display: flex;
-  padding: 15px;
+  padding: 3%;
+  margin: 3%;
+  background-color: #417DC1;
+  width: 100px;
+  height: 150px;
+}
+
+.pokemon-img {
+  border: 5px solid #ECBC09;
+  display: flex;
+  padding: 0%;
   justify-content: center;
   background-color: white;
-  width: 70px;
-	height: 70px;
-	object-fit: cover;
-}*/
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0%;
+}
+
+.pokemon-name {
+  display: flex;
+  color: #B1E46B;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 3%;
+}
+
+.pokemon-type {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 15px;
+
+}
+
+.pokemon-num {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 15px;
+
+}
 
 /*Contenedor del cuerpo de la página filter y tarjetas*/
 .container {
-flex: 100%;  
-display: flex;
-flex-wrap: wrap;
+  flex: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*lado inzquierdo*/
 .container-filter {
   flex: 25%;
   background-color: #F8F9F9;
- }
+}
 
- h2{
+h2 {
   margin: 0%;
   background-color: #B1E46B;
   height: 30px;
@@ -129,53 +122,68 @@ flex-wrap: wrap;
 }
 
 /*indicacion de "selecciona aqui"*/
-label{
+label {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
   color: #417DC1;
   margin-left: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 /*Lista desplegable*/
-select{
+select {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   color: #417DC1;
   margin-left: 20px;
+  margin-bottom: 20px;
 }
+
 
 /*lado derecho*/
 .container-cards {
   flex: 75%;
   display: flex;
   flex-wrap: wrap;
-  }
+}
 
 
-.container-cards.column{
-  flex:20%;
+.container-cards.column {
+  flex: 20%;
   max-width: 25%;
   padding: 0 4px;
 }
 
-.imagen-footer {
+/*fotter*/
+#imagen-footer {
   float: right;
-  
-}  
-.foot{
-  background-color: #417DC1;
-
-}
-/*.imagen-footer {
-
-}
-/*#root.column.galeria-img {
-  margin-top: 8px;
+  margin-right: 20px;
+  margin-top: 15PX;
   vertical-align: middle;
-  width: 100%;
-  height: auto;
-}*/
 
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  padding: 0%;
+  margin-bottom: 10px;
+  margin-left: 10PX;
+  vertical-align: bottom;
+}
+
+footer {
+  background-color: #86B8FF;
+  padding: 0%;
+  size: 0px;
+  box-sizing: border-box;
+  height: 150px;
+  width: 100%;
+  position: absolute;
+}
+
+/*RESPONSIVE*/
 
 @media screen (max-width: 700px) {
   .row {
