@@ -57,7 +57,7 @@ p {
   border: 8px solid #ECBC09;
   display: flex;
   padding: 3%;
-  margin: 3%;
+  margin: 1.5%;
   background-color: #417DC1;
   width: 100px;
   height: 150px;
@@ -108,7 +108,8 @@ p {
 /*lado inzquierdo*/
 .container-filter {
   flex: 25%;
-  background-color: #F8F9F9;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 350px;
 }
 
 h2 {
@@ -138,6 +139,9 @@ select {
   color: #417DC1;
   margin-left: 20px;
   margin-bottom: 20px;
+  width: 200px;
+
+  border-color: #2d5481;
 }
 
 
@@ -146,11 +150,14 @@ select {
   flex: 75%;
   display: flex;
   flex-wrap: wrap;
+  height: 600px;
+	overflow-y: scroll;
 }
 
 
 .container-cards.column {
   flex: 20%;
+  display: flex;
   max-width: 25%;
   padding: 0 4px;
 }
@@ -166,27 +173,28 @@ select {
 
 h3 {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
+  font-size: 18px;
   padding: 0%;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   margin-left: 10PX;
   vertical-align: bottom;
 }
 
 footer {
-  background-color: #86B8FF;
   padding: 0%;
   size: 0px;
   box-sizing: border-box;
   height: 150px;
   width: 100%;
   position: absolute;
+  margin-bottom: 0%;
 }
 
 /*RESPONSIVE*/
 
-@media screen (max-width: 700px) {
-  .row {
+@media screen (min-width: 320px) and (max-width: 700px) {
+  .column {
     flex-direction: column;
   }
 }
+

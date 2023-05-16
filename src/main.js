@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import {selecType, selectname1, sortAZ, sortZA} from './data.js';
+import {selecType, resistantSelect, weaknessesSelect, sortAZ, sortZA} from './data.js';
 
 //Mostramos las tarjetas de pokemon en pantalla
 function showOnCards(data) {
@@ -27,84 +27,42 @@ typeselect.addEventListener("change", () => {
   showOnCards(dataFiltered);
 });
 
-//filtrado por peso resistant
-
-//filtrado por peso weaknesses
-
-//Ordenar de la A-Z
-const orderselectaz = document.getElementById("name");
-orderselectaz.addEventListener("change", () => {
-  const selectnameaz = orderselectaz.value;
-  const dataOrderedaz = sortAZ(data.pokemon, selectnameaz);
-  console.log(dataOrderedaz);
-  showOnCards(dataOrderedaz);
+//filtrado por resistant (resistencia)
+const selectResistant = document.getElementById("resistant");
+selectResistant.addEventListener("change", () => {
+  const resistantvalue = selectResistant.value;
+  const dataFiltered2 = resistantSelect(data.pokemon, resistantvalue);
+  //console.log(dataFiltered2);
+  showOnCards(dataFiltered2);
 });
 
-/*//Ordenar de la Z-A
-const orderselectza = document.getElementById("name");
-orderselectza.addEventListener("change", () => {
-  const selectnameza = orderselectza.value;
-  const dataOrderedza = sortZA(data.pokemon, selectnameza);
-  //console.log(dataOrderedza);
-  showOnCards(dataOrderedza);
-});*/
+//filtrado por  weaknesses (debilidad)
+const selectweaknesses = document.getElementById("weaknesses");
+selectweaknesses.addEventListener("change", () => {
+  const selectweaknessesvalue = selectweaknesses.value;
+  const dataFiltered3 = weaknessesSelect(data.pokemon, selectweaknessesvalue);
+  //console.log(dataFiltered3);
+  showOnCards(dataFiltered3);
+});
+
+//Ordenar de la A-Z y de la Z-A
+const orderselectaz = document.getElementById("name");
+orderselectaz.addEventListener("change", (e) => 
+{
+  //console.log(e.target.value)
+  if (e.target.value==="A-Z") {
+    
+    const dataOrderedaz = sortAZ(data.pokemon);
+    console.log(dataOrderedaz);
+    showOnCards(dataOrderedaz);
+  }
+  else {
+    
+    const dataOrderedza = sortZA(data.pokemon);
+    //console.log(dataOrderedza);
+    showOnCards(dataOrderedza);
+  }
+});
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//cree una constante con los pokemon de la data y con el for recorro los pokemones
-//console.log(data)
-
-/*const pokemon = data.pokemon;
-const root = document.getElementById("root");
-
-for (let i = 0; i < pokemon.length; i++) {
-  //console.log("name: " + pokemon[i].name + "imagen: " + pokemon[i].img);
-  const imagenPokemon = document.createElement ("img"); //muestro las imagenes
-  imagenPokemon.src = pokemon[i].img;
-  imagenPokemon.classList.add("galeria-img");
-  root.appendChild(imagenPokemon);
-
-  const nombrePokemon = document.createTextNode ("name"); //muestro los nombres
-  nombrePokemon.nodeValue = pokemon[i].name;
-  root.appendChild(nombrePokemon);
-
-//const numPokemon = document.createTextNode ("num"); //muestro el numero
-//numPokemon.nodeValue = pokemon[i].num;
-//root.appendChild(numPokemon);
- 
-}*/
-
-//console.log(data);
-
-//const mostrarPokemon= document.getElementById(pokemon.map(function mostrar (data){
-//return `${data.name}`;
-//}))
-//console.log(mostrarPokemon);
-//let pokemon= "";
-//function showCards(data) {
-// document.getElementById('data').innerHTML = data.map((pokemon)` 
-// <div class = "ficha">
-//        <div class = "image">
-//           <img id = "imagem-card" src="${pokemon.img}">       </img>
-//            <div class="name">${pokemon.name}</div>
-                 
-//</div>
-//   ` )
-//    .join("")
-//}
-//showCards(pokemon.resultado)}
