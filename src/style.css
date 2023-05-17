@@ -25,19 +25,23 @@ html {
   padding: 10px;
   size: 0px;
   box-sizing: border-box;
+  box-sizing: wrap;
 }
 
 #logo {
   float: left;
+  flex-direction: column;
+  width: 20vw;
+  height: 10vw;
 }
 
 h1 {
   font-family: "Pokemon solid";
   letter-spacing: 5px;
-  font-size: 40px;
+  font-size: 2.5vw;
   text-align: right;
   -webkit-text-fill-color: #ECBC09;
-  -webkit-text-stroke: 2px #053061;
+  -webkit-text-stroke: 0.1vw #053061;
 
 }
 
@@ -46,10 +50,10 @@ p {
   font-family: "Pokemon solid";
   letter-spacing: 3px;
   color: black;
-  font-size: 25px;
+  font-size: 1.5vw;
   text-align: center;
   -webkit-text-fill-color: #2d5481;
-  -webkit-text-stroke: 1px #ECBC09;
+  -webkit-text-stroke: 0.4px #ECBC09;
 }
 
 /*tarjetas pokemon*/
@@ -173,7 +177,7 @@ select {
 
 h3 {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
+  font-size: 15px;
   padding: 0%;
   margin-bottom: 0px;
   margin-left: 10PX;
@@ -184,7 +188,7 @@ footer {
   padding: 0%;
   size: 0px;
   box-sizing: border-box;
-  height: 150px;
+  height:20px;
   width: 100%;
   position: absolute;
   margin-bottom: 0%;
@@ -192,9 +196,19 @@ footer {
 
 /*RESPONSIVE*/
 
-@media screen (min-width: 320px) and (max-width: 700px) {
+@media screen and (min-width: 320px) {
   .column {
     flex-direction: column;
   }
+  
+  
+  /*.letter {      
+    letter-spacing: 2px;
+    font-size: 20vw;
+  }
+  .welcome{
+    font-size: 50%px;
+  }*/
+  
 }
 
