@@ -25,6 +25,13 @@ typeselect.addEventListener("change", () => {
   const dataFiltered = selecType(data.pokemon, selectvalue);
   //console.log(dataFiltered);
   showOnCards(dataFiltered);
+  //Calcculo del % por tipo
+  const countDataFiltered= dataFiltered.length;
+  //console.log(countDataFiltered);
+  const calculoType= (countDataFiltered*100)/(251);
+  //console.log(calculoType);
+  document.getElementById("resultado").innerHTML = calculoType.toFixed(2) + ("% del total de pokemon");
+  //console.log(calculoType);
 });
 
 //filtrado por resistant (resistencia)
@@ -34,6 +41,11 @@ selectResistant.addEventListener("change", () => {
   const dataFiltered2 = resistantSelect(data.pokemon, resistantvalue);
   //console.log(dataFiltered2);
   showOnCards(dataFiltered2);
+  //Calcculo del % por resistant
+  const countDataFiltered2= dataFiltered2.length
+  const calculoResistant= (countDataFiltered2*100)/(251);
+  document.getElementById("resultadoResistant").innerHTML = calculoResistant.toFixed(2) + ("% del total de pokemon");
+  //console.log(calculoResistant);
 });
 
 //filtrado por  weaknesses (debilidad)
@@ -43,6 +55,11 @@ selectweaknesses.addEventListener("change", () => {
   const dataFiltered3 = weaknessesSelect(data.pokemon, selectweaknessesvalue);
   //console.log(dataFiltered3);
   showOnCards(dataFiltered3);
+  //Calculo del % por weaknesses
+  const countDataFiltered3= dataFiltered3.length
+  const calculoWeaknesses= (countDataFiltered3*100)/(251);
+  document.getElementById("resultadoWeaknesses").innerHTML = calculoWeaknesses.toFixed(2) + ("% del total de pokemon");
+  //console.log(calculoWeaknesses);
 });
 
 //Ordenar de la A-Z y de la Z-A

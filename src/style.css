@@ -1,4 +1,5 @@
 /*Fuentes de pokemon*/
+
 @font-face {
   font-family: 'Pokemon Solid';
   src: url('Font/Pokemon\ Solid.ttf') format('truetype');
@@ -33,15 +34,19 @@ html {
   flex-direction: column;
   width: 20vw;
   height: 10vw;
+  margin-top: 30px;
 }
 
 h1 {
   font-family: "Pokemon solid";
   letter-spacing: 5px;
   font-size: 2.5vw;
-  text-align: right;
+  text-align: center;
   -webkit-text-fill-color: #ECBC09;
   -webkit-text-stroke: 0.1vw #053061;
+  padding: 0%;
+  margin: 0%;
+  height: 300px;
 
 }
 
@@ -102,6 +107,33 @@ p {
 
 }
 
+.refrescar{
+    background-color: #B1E46B;
+    color:#053061;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10%;
+    border: solid #053061;
+    width: 150px;
+    height: 70px;
+    float: center;
+    margin-left: 150px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+   }
+   
+   .refrescar:hover {
+     background-color: #417DC1;
+     color: white;
+   }
+   
+   .contenRefrescar{
+     
+     height: 100px;
+   }
+   
+
 /*Contenedor del cuerpo de la página filter y tarjetas*/
 .container {
   flex: 100%;
@@ -113,7 +145,7 @@ p {
 .container-filter {
   flex: 25%;
   background-color: rgba(255, 255, 255, 0.5);
-  height: 350px;
+  height: 500px;
 }
 
 h2 {
@@ -124,6 +156,7 @@ h2 {
   color: white;
   -webkit-text-fill-color: #2d5481;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 /*indicacion de "selecciona aqui"*/
@@ -132,8 +165,6 @@ label {
   font-size: 20px;
   color: #417DC1;
   margin-left: 10px;
-  margin-top: 8px;
-  margin-bottom: 20px;
 }
 
 /*Lista desplegable*/
@@ -142,10 +173,19 @@ select {
   font-size: 20px;
   color: #417DC1;
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   width: 200px;
 
   border-color: #2d5481;
+}
+
+.resultado{
+  font-family: pokemon solid;
+  letter-spacing: 2px;
+  font-size: 15px;
+  color: #417DC1;
+  margin-left: 80px;
 }
 
 
@@ -201,14 +241,3 @@ footer {
     flex-direction: column;
   }
   
-  
-  /*.letter {      
-    letter-spacing: 2px;
-    font-size: 20vw;
-  }
-  .welcome{
-    font-size: 50%px;
-  }*/
-  
-}
-

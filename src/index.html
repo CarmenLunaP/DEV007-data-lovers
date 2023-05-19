@@ -13,7 +13,7 @@
       <img class="logo" src="./Imagen/Logo.jpg" id="logo" alt="logo" height="100" width="200">
     </picture>
     <div class="letter">
-      <h1>Atrapa la emoción en cada imagen "Bienvenido a Pokemon Gallery"</h1>
+      <h1>Atrapa la emoción en cada imagen <br> "Bienvenido a Pokemon Gallery"</h1>
     </div>
   </div>
 </header>
@@ -23,6 +23,9 @@
   <p>Aquí encontrarás una colección increíble de imágenes y recursos de tus personajes favoritos de Pokemon. ¡Explora y
     diviértete!</p>
   </div>
+<div class="contenRefrescar">  
+<input class= refrescar type="button" value="Actualizar" onclick="location.reload()"/>
+</div>
   <div class="container">
     <div class="container-filter">
       <h2>Filtra tus Pokemon</h2>
@@ -47,6 +50,7 @@
         <option value="Dark">Dark</option>
         <option value="Fairy">Fairy</option>
       </select> <br>
+      <div class= resultado id="resultado"></div> <br>
       <label for="resistant">Resistencia:</label><br>
       <select name="resistant" id="resistant">
         <option value="-----">-----</option>
@@ -68,8 +72,8 @@
         <option value="Dragon">Dragon</option>
         <option value="Dark">Dark</option>
         <option value="Fairy">Fairy</option>
-      </select>
-      <br>
+      </select> <br>
+      <div class= resultado id="resultadoResistant"></div> <br>
       <label for="weaknesses">Debilidad:</label><br>
       <select name="weaknesses" id="weaknesses">
         <option value="-----">-----</option>
@@ -92,6 +96,7 @@
         <option value="Dark">Dark</option>
         <option value="Fairy">Fairy</option>
       </select>
+      <div class= resultado id="resultadoWeaknesses"></div> <br>
       <div>
         <h2>Ordena tus Pokemon</h2>
         <label for="Order">Ordena:</label><br>
