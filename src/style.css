@@ -186,6 +186,7 @@ select {
   border-color: #2d5481;
 }
 
+/*Porcentaje*/
 .resultado{
   font-family: pokemon solid;
   letter-spacing: 2px;
@@ -210,7 +211,7 @@ select {
   max-width: 25%;
   padding: 0 4px;
 }
-
+/*Creadores*/
 h3 {
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;

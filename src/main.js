@@ -1,4 +1,4 @@
-import data from '../src/data/pokemon/pokemon.js';
+import data from '../data/pokemon/pokemon.js';
 import {selecType, resistantSelect, weaknessesSelect, sortAZ, sortZA, calculoType} from './data.js';
 
 //Mostramos las tarjetas de pokemon en pantalla
@@ -31,7 +31,7 @@ typeselect.addEventListener("change", () => {
   //console.log(countDataFiltered);
   const porcentajeType =  calculoType(countDataFiltered);
   // console.log(porcentajeType);
-  document.getElementById("resultado").innerHTML = porcentajeType.toFixed(2) + ("% del total de pokemon");
+  document.getElementById("resultado").innerHTML = porcentajeType + ("% del total de pokemon");
   //console.log(calculoType);
   return porcentajeType,countDataFiltered;
 });
@@ -46,7 +46,7 @@ selectResistant.addEventListener("change", () => {
   //Calcculo del % por resistant
   const countDataFiltered2= dataFiltered2.length
   const calculoResistant= (countDataFiltered2*100)/(251);
-  document.getElementById("resultadoResistant").innerHTML = calculoResistant.toFixed(2) + ("% del total de pokemon");
+  document.getElementById("resultadoResistant").innerHTML = calculoResistant + ("% del total de pokemon");
   //console.log(calculoResistant);
 });
 
@@ -60,7 +60,7 @@ selectweaknesses.addEventListener("change", () => {
   //Calculo del % por weaknesses
   const countDataFiltered3= dataFiltered3.length
   const calculoWeaknesses= (countDataFiltered3*100)/(251);
-  document.getElementById("resultadoWeaknesses").innerHTML = calculoWeaknesses.toFixed(2) + ("% del total de pokemon");
+  document.getElementById("resultadoWeaknesses").innerHTML = calculoWeaknesses + ("% del total de pokemon");
   //console.log(calculoWeaknesses);
 });
 
@@ -84,7 +84,3 @@ orderselectaz.addEventListener("change", (e) =>
 });
 
 
-//const refresh = document.getElementById("type");
-//refresh.addEventListener('click', _ => {
-//  location.reload();
-//})

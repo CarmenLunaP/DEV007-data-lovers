@@ -1,6 +1,6 @@
 /*import { example, anotherExample } from '../src/data.js';*/
 //import data from '../src/data/pokemon/pokemon.js';
-import {selecType, calculoType, sortAZ} from '../src/data.js';
+import {selecType, calculoType, resistantSelect, sortAZ, sortZA} from '../src/data.js';
 import pokemon from '../src/data/pokemon/pokemon.js';
 
 
@@ -491,6 +491,320 @@ const filterbyDark= [
   },
 ]
 
+//Test Filtro por Resistencia:
+describe('resistantSelect', () => {
+ 
+  it('is a function para filtrar', () => {
+    expect(typeof resistantSelect).toBe('function');
+  });
+
+  it('returns resistantSelect Ice', () => {
+    expect(resistantSelect(pokemon.pokemon,"Ice")).toStrictEqual(filterResistenciaIce);
+  });
+});
+//Los datos para el test de Resistencia
+const filterResistenciaIce =[
+  {
+    "num": "124",
+    "name": "jynx",
+    "generation": {
+      "num": "generation i",
+      "name": "kanto"
+    },
+    "about": "Jynx walks rhythmically, swaying and shaking its hips as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without giving any thought to what they are doing.",
+    "img": "https://www.serebii.net/pokemongo/pokemon/124.png",
+    "size": {
+      "height": "1.40 m",
+      "weight": "40.6 kg"
+    },
+    "pokemon-rarity": "normal",
+    "type": [
+      "ice",
+      "psychic"
+    ],
+    "encounter": {
+      "base-flee-rate": "0.09",
+      "base-capture-rate": "0.3"
+    },
+    "spawn-chance": "0.35",
+    "stats": {
+      "base-attack": "223",
+      "base-defense": "151",
+      "base-stamina": "163",
+      "max-cp": "2555",
+      "max-hp": "140"
+    },
+    "resistant": [
+      "ice",
+      "psychic"
+    ],
+    "weaknesses": [
+      "fire",
+      "bug",
+      "rock",
+      "ghost",
+      "dark",
+      "steel"
+    ],
+    "quick-move": [
+      {
+        "name": "frost breath",
+        "type": "ice",
+        "base-damage": "10",
+        "energy": "8",
+        "move-duration-seg": "0.9"
+      },
+      {
+        "name": "confusion",
+        "type": "psychic",
+        "base-damage": "20",
+        "energy": "15",
+        "move-duration-seg": "1.6"
+      },
+      {
+        "name": "pound",
+        "type": "normal",
+        "base-damage": "7",
+        "energy": "6",
+        "move-duration-seg": "0.6"
+      }
+    ],
+    "special-attack": [
+      {
+        "name": "draining kiss",
+        "type": "fairy",
+        "base-damage": "60",
+        "energy": "-50",
+        "move-duration-seg": "2.6"
+      },
+      {
+        "name": "psyshock",
+        "type": "psychic",
+        "base-damage": "65",
+        "energy": "-33",
+        "move-duration-seg": "2.7"
+      },
+      {
+        "name": "avalanche",
+        "type": "ice",
+        "base-damage": "90",
+        "energy": "-50",
+        "move-duration-seg": "2.7"
+      },
+      {
+        "name": "ice punch",
+        "type": "ice",
+        "base-damage": "50",
+        "energy": "-33",
+        "move-duration-seg": "1.9"
+      }
+    ],
+    "egg": "10 km",
+    "buddy-distance-km": "5",
+    "evolution": {
+      "candy": "jynx candy",
+      "prev-evolution": [{
+        "num": "238",
+        "name": "smoochum",
+        "candy-cost": "25"
+      }]
+    }
+  },
+  {
+    "num": "215",
+    "name": "sneasel",
+    "generation": {
+      "num": "generation ii",
+      "name": "johto"
+    },
+    "about": "Sneasel scales trees by punching its hooked claws into the bark. This Pokémon seeks out unguarded nests and steals eggs for food while the parents are away.",
+    "img": "https://www.serebii.net/pokemongo/pokemon/215.png",
+    "size": {
+      "height": "0.89 m",
+      "weight": "28.0 kg"
+    },
+    "pokemon-rarity": "normal",
+    "type": [
+      "dark",
+      "ice"
+    ],
+    "encounter": {
+      "base-flee-rate": "0.07",
+      "base-capture-rate": "0.2"
+    },
+    "spawn-chance": null,
+    "stats": {
+      "base-attack": "189",
+      "base-defense": "146",
+      "base-stamina": "146",
+      "max-cp": "2051",
+      "max-hp": "127"
+    },
+    "resistant": [
+      "ice",
+      "psychic",
+      "ghost",
+      "dark"
+    ],
+    "weaknesses": [
+      "fire",
+      "fighting",
+      "bug",
+      "rock"
+    ],
+    "quick-move": [
+      {
+        "name": "ice shard",
+        "type": "ice",
+        "base-damage": "12",
+        "energy": "12",
+        "move-duration-seg": "1.2"
+      },
+      {
+        "name": "feint attack",
+        "type": "dark",
+        "base-damage": "10",
+        "energy": "9",
+        "move-duration-seg": "0.9"
+      }
+    ],
+    "special-attack": [
+      {
+        "name": "avalanche",
+        "type": "ice",
+        "base-damage": "90",
+        "energy": "-50",
+        "move-duration-seg": "2.7"
+      },
+      {
+        "name": "ice punch",
+        "type": "ice",
+        "base-damage": "50",
+        "energy": "-33",
+        "move-duration-seg": "1.9"
+      },
+      {
+        "name": "foul play",
+        "type": "dark",
+        "base-damage": "70",
+        "energy": "-50",
+        "move-duration-seg": "2"
+      }
+    ],
+    "egg": "5 km",
+    "buddy-distance-km": "3",
+    "evolution": {
+      "candy": "sneasel candy",
+      "next-evolution": [{
+        "num": "461",
+        "name": "weavile",
+        "candy-cost": "100",
+        "evolution-item": {
+          "name": "sinnoh stone",
+          "img": "https://pokemon.gameinfo.io/images/item/thumbs/200/sinnoh-stone.png"
+        }
+      }]
+    }
+  },
+  {
+    "num": "238",
+    "name": "smoochum",
+    "generation": {
+      "num": "generation ii",
+      "name": "johto"
+    },
+    "about": "Smoochum actively runs about, but also falls quite often. Whenever the chance arrives, it will look for its reflection to make sure its face hasn't become dirty.",
+    "img": "https://www.serebii.net/pokemongo/pokemon/238.png",
+    "size": {
+      "height": "0.41 m",
+      "weight": "6.0 kg"
+    },
+    "pokemon-rarity": "normal",
+    "type": [
+      "ice",
+      "psychic"
+    ],
+    "encounter": {
+      "base-flee-rate": "not in capture",
+      "base-capture-rate": "not in capture"
+    },
+    "spawn-chance": "0",
+    "stats": {
+      "base-attack": "153",
+      "base-defense": "91",
+      "base-stamina": "128",
+      "max-cp": "1291",
+      "max-hp": "113"
+    },
+    "resistant": [
+      "ice",
+      "psychic"
+    ],
+    "weaknesses": [
+      "fire",
+      "bug",
+      "rock",
+      "ghost"
+    ],
+    "quick-move": [
+      {
+        "name": "powder snow",
+        "type": "ice",
+        "base-damage": "6",
+        "energy": "15",
+        "move-duration-seg": "1"
+      },
+      {
+        "name": "pound",
+        "type": "normal",
+        "base-damage": "7",
+        "energy": "6",
+        "move-duration-seg": "0.6"
+      },
+      {
+        "name": "frost breath",
+        "type": "ice",
+        "base-damage": "10",
+        "energy": "8",
+        "move-duration-seg": "0.9"
+      }
+    ],
+    "special-attack": [
+      {
+        "name": "ice beam",
+        "type": "ice",
+        "base-damage": "90",
+        "energy": "-50",
+        "move-duration-seg": "3.3"
+      },
+      {
+        "name": "ice punch",
+        "type": "ice",
+        "base-damage": "50",
+        "energy": "-33",
+        "move-duration-seg": "1.9"
+      },
+      {
+        "name": "psyshock",
+        "type": "psychic",
+        "base-damage": "65",
+        "energy": "-33",
+        "move-duration-seg": "2.7"
+      }
+    ],
+    "egg": "7 km",
+    "buddy-distance-km": "5",
+    "evolution": {
+      "candy": "jynx candy",
+      "next-evolution": [{
+        "num": "124",
+        "name": "jynx",
+        "candy-cost": "25"
+      }]
+    }
+  },
+]
+
 
 //Test de ordenar A-Z
 describe('sortAZ', () => {
@@ -696,5 +1010,218 @@ describe('sortAZ', () => {
     );
   });
 });
+
+//Test de ordenar Z-A
+describe('sortZA', () => {
+  it('is a function para ordenarZA', () => {
+    expect(typeof sortZA).toBe('function');
+  });
+
+  it('returns sortZA el pokemon 1 es Zubat', () => {
+    expect(sortZA(pokemon.pokemon.slice(),"name", "descendente")[0]).toEqual(
+      {
+        "num": "041",
+        "name": "zubat",
+        "generation": {
+          "num": "generation i",
+          "name": "kanto"
+        },
+        "about": "Zubat remains quietly unmoving in a dark spot during the bright daylight hours. It does so because prolonged exposure to the sun causes its body to become slightly burned.",
+        "img": "https://www.serebii.net/pokemongo/pokemon/041.png",
+        "size": {
+          "height": "0.79 m",
+          "weight": "7.5 kg"
+        },
+        "pokemon-rarity": "normal",
+        "type": [
+          "poison",
+          "flying"
+        ],
+        "encounter": {
+          "base-flee-rate": "0.2",
+          "base-capture-rate": "0.5"
+        },
+        "spawn-chance": "6.52",
+        "stats": {
+          "base-attack": "83",
+          "base-defense": "73",
+          "base-stamina": "120",
+          "max-cp": "667",
+          "max-hp": "106"
+        },
+        "resistant": [
+          "grass",
+          "fighting",
+          "poison",
+          "bug",
+          "fairy"
+        ],
+        "weaknesses": [
+          "electric",
+          "ice",
+          "psychic",
+          "rock"
+        ],
+        "quick-move": [
+          {
+            "name": "quick attack",
+            "type": "normal",
+            "base-damage": "8",
+            "energy": "10",
+            "move-duration-seg": "0.8"
+          },
+          {
+            "name": "bite",
+            "type": "dark",
+            "base-damage": "6",
+            "energy": "4",
+            "move-duration-seg": "0.5"
+          }
+        ],
+        "special-attack": [
+          {
+            "name": "poison fang",
+            "type": "poison",
+            "base-damage": "35",
+            "energy": "-33",
+            "move-duration-seg": "1.7"
+          },
+          {
+            "name": "air cutter",
+            "type": "flying",
+            "base-damage": "60",
+            "energy": "-50",
+            "move-duration-seg": "2.7"
+          },
+          {
+            "name": "swift",
+            "type": "normal",
+            "base-damage": "60",
+            "energy": "-50",
+            "move-duration-seg": "2.8"
+          },
+          {
+            "name": "sludge bomb",
+            "type": "poison",
+            "base-damage": "80",
+            "energy": "-50",
+            "move-duration-seg": "2.3"
+          }
+        ],
+        "egg": "2 km",
+        "buddy-distance-km": "1",
+        "evolution": {
+          "candy": "zubat candy",
+          "next-evolution": [{
+            "num": "042",
+            "name": "golbat",
+            "candy-cost": "50",
+            "next-evolution": [{
+              "num": "169",
+              "name": "crobat",
+              "candy-cost": "100"
+            }]
+          }]
+        }
+      },
+    )
+  },
+  );
+  
+  it('returns sortZA el pokemon 9 es Weedle', () => {
+    expect(sortZA(pokemon.pokemon.slice(),"name", "descendente")[9]).toEqual(
+      {
+        "num": "013",
+        "name": "weedle",
+        "generation": {
+          "num": "generation i",
+          "name": "kanto"
+        },
+        "about": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+        "img": "https://www.serebii.net/pokemongo/pokemon/013.png",
+        "size": {
+          "height": "0.30 m",
+          "weight": "3.2 kg"
+        },
+        "pokemon-rarity": "normal",
+        "type": [
+          "bug",
+          "poison"
+        ],
+        "encounter": {
+          "base-flee-rate": "0.2",
+          "base-capture-rate": "0.5"
+        },
+        "spawn-chance": "7.12",
+        "stats": {
+          "base-attack": "63",
+          "base-defense": "50",
+          "base-stamina": "120",
+          "max-cp": "456",
+          "max-hp": "106"
+        },
+        "resistant": [
+          "grass",
+          "fighting",
+          "poison",
+          "bug",
+          "fairy"
+        ],
+        "weaknesses": [
+          "fire",
+          "flying",
+          "psychic",
+          "rock"
+        ],
+        "quick-move": [
+          {
+            "name": "bug bite",
+            "type": "bug",
+            "base-damage": "5",
+            "energy": "6",
+            "move-duration-seg": "0.5"
+          },
+          {
+            "name": "poison sting",
+            "type": "poison",
+            "base-damage": "5",
+            "energy": "7",
+            "move-duration-seg": "0.6"
+          }
+        ],
+        "special-attack": [
+          {
+            "name": "struggle",
+            "type": "normal",
+            "base-damage": "35",
+            "energy": "-33",
+            "move-duration-seg": "2.2"
+          }],
+        "egg": "2 km",
+        "buddy-distance-km": "1",
+        "evolution": {
+          "candy": "weedle candy",
+          "next-evolution": [{
+            "num": "014",
+            "name": "kakuna",
+            "candy-cost": "12",
+            "next-evolution": [{
+              "num": "015",
+              "name": "beedrill",
+              "candy-cost": "50"
+            }]
+          }]
+        }
+      },
+    
+    )
+  },
+  )
+});
+
+
+
+
+
 
 

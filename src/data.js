@@ -1,5 +1,3 @@
-
-
 //filtro de tipos de Pokemon
 export const selecType = (pokemon, condition) => {
   const showTypes = pokemon.filter(pokemon => {
@@ -37,6 +35,7 @@ const selectname1 = (data) => data.sort((a,z)=> {
 export const sortAZ = (data) => selectname1(data).slice(0,251);
 export const sortZA = (data) => selectname1(data).slice(0,251).reverse();
 
+//Calculo de % de Tipo de Pokemon
 export function calculoType(cantPokemon){
   return Number(Math.round((Number(cantPokemon)*100)/(251)));
 }
