@@ -1,8 +1,8 @@
-//import pokemon from "./data/pokemon/pokemon";
+
 
 //filtro de tipos de Pokemon
-export const selecType = (data, condition) => {
-  const showTypes = data.filter(pokemon => {
+export const selecType = (pokemon, condition) => {
+  const showTypes = pokemon.filter(pokemon => {
     return pokemon.type[0].toLowerCase() === condition.toLowerCase(); //TolowerCase pasa toda la data a minuscula
   });
   return showTypes;
@@ -37,5 +37,7 @@ const selectname1 = (data) => data.sort((a,z)=> {
 export const sortAZ = (data) => selectname1(data).slice(0,251);
 export const sortZA = (data) => selectname1(data).slice(0,251).reverse();
 
-
+export function calculoType(cantPokemon){
+  return Number(Math.round((Number(cantPokemon)*100)/(251)));
+}
 

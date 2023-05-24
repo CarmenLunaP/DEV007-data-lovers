@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Pokemon Gallery</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,7 +13,7 @@
       <img class="logo" src="./Imagen/Logo.jpg" id="logo" alt="logo" height="100" width="200">
     </picture>
     <div class="letter">
-      <h1>Atrapa la emoción en cada imagen <br> "Bienvenido a Pokemon Gallery"</h1>
+      <h1>Atrapa la emoción en cada imagen <br>"Bienvenido a Pokemon Gallery"</h1>
     </div>
   </div>
 </header>
@@ -23,14 +23,15 @@
   <p>Aquí encontrarás una colección increíble de imágenes y recursos de tus personajes favoritos de Pokemon. ¡Explora y
     diviértete!</p>
   </div>
-<div class="contenRefrescar">  
-<input class= refrescar type="button" value="Actualizar" onclick="location.reload()"/>
-</div>
+
   <div class="container">
     <div class="container-filter">
       <h2>Filtra tus Pokemon</h2>
+      <div class="contenRefrescar">  
+        <input class= "refrescar" type="button" value="Limpiar" onclick="location.reload()"/>
+      </div>
       <label for="type1">Tipo de pokemon:</label><br>
-      <select name="type" id="type">
+        <select name="type" id="type">
         <option value="-----">-----</option>
         <option value="normal">Normal</option>
         <option value="Fighting">Fighting</option>
@@ -50,7 +51,7 @@
         <option value="Dark">Dark</option>
         <option value="Fairy">Fairy</option>
       </select> <br>
-      <div class= resultado id="resultado"></div> <br>
+      <div class= "resultado" id="resultado"></div>
       <label for="resistant">Resistencia:</label><br>
       <select name="resistant" id="resistant">
         <option value="-----">-----</option>
@@ -73,7 +74,7 @@
         <option value="Dark">Dark</option>
         <option value="Fairy">Fairy</option>
       </select> <br>
-      <div class= resultado id="resultadoResistant"></div> <br>
+      <div class= "resultado" id="resultadoResistant"></div>
       <label for="weaknesses">Debilidad:</label><br>
       <select name="weaknesses" id="weaknesses">
         <option value="-----">-----</option>
@@ -96,7 +97,7 @@
         <option value="Dark">Dark</option>
         <option value="Fairy">Fairy</option>
       </select>
-      <div class= resultado id="resultadoWeaknesses"></div> <br>
+      <div class= "resultado" id="resultadoWeaknesses"></div> <br>
       <div>
         <h2>Ordena tus Pokemon</h2>
         <label for="Order">Ordena:</label><br>
@@ -113,15 +114,15 @@
   <script src="main.js" type="module"></script>
   <h3>© Creado por:</h3>
     <h3>Analía Klein <br>Carmen Luna</h3>
-  <footer>
+  <!--<footer>
     <div class="foot"></div>
-    <!--<picture>
+    <picture>
       <img class="imagen-footer" src="./Imagen/imagen footer.png" id="imagen-footer" alt="imagen-footer" height="100"
         width="200">>
-    </picture> -->
+    </picture>
     
     </div>
-  </footer>
+  </footer> -->
 </body>
 
 </html>

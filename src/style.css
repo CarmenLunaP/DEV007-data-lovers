@@ -23,30 +23,32 @@ html {
 /*Menbrete de la pag -logo y eslogan*/
 .header-container {
   background-color: #86B8FF;
-  padding: 10px;
+  padding: 0px;
   size: 0px;
   box-sizing: border-box;
   box-sizing: wrap;
+  height: 200px;
 }
 
 #logo {
   float: left;
   flex-direction: column;
-  width: 20vw;
-  height: 10vw;
-  margin-top: 30px;
+  width: 350px;
+  height: 180px;
+  margin-top: 15px;
+  margin-left: 10px;
 }
 
 h1 {
   font-family: "Pokemon solid";
   letter-spacing: 5px;
-  font-size: 2.5vw;
+  font-size: 35px;
   text-align: center;
   -webkit-text-fill-color: #ECBC09;
   -webkit-text-stroke: 0.1vw #053061;
   padding: 0%;
   margin: 0%;
-  height: 300px;
+  
 
 }
 
@@ -55,7 +57,7 @@ p {
   font-family: "Pokemon solid";
   letter-spacing: 3px;
   color: black;
-  font-size: 1.5vw;
+  font-size: 25px;
   text-align: center;
   -webkit-text-fill-color: #2d5481;
   -webkit-text-stroke: 0.4px #ECBC09;
@@ -82,6 +84,7 @@ p {
   height: 100px;
   object-fit: cover;
   margin: 0%;
+  border-radius: 5%;
 }
 
 .pokemon-name {
@@ -111,16 +114,17 @@ p {
     background-color: #B1E46B;
     color:#053061;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
     border-radius: 10%;
-    border: solid #053061;
-    width: 150px;
-    height: 70px;
-    float: center;
-    margin-left: 150px;
+    border: solid #417DC1;
+    position: relative;
+    height: 35px;
+    float: right;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
+    margin-right: 20px;
+    
    }
    
    .refrescar:hover {
@@ -129,9 +133,12 @@ p {
    }
    
    .contenRefrescar{
-     
-     height: 100px;
-   }
+   
+    flex: 25%;
+    float: right;
+    flex-wrap: wrap;
+    
+  }
    
 
 /*Contenedor del cuerpo de la página filter y tarjetas*/
@@ -149,10 +156,13 @@ p {
 }
 
 h2 {
+  display: Flex;
+  width: 100%;
   margin: 0%;
   background-color: #B1E46B;
   height: 30px;
   font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
   color: white;
   -webkit-text-fill-color: #2d5481;
   text-align: center;
@@ -176,7 +186,6 @@ select {
   margin-bottom: 10px;
   margin-top: 10px;
   width: 200px;
-
   border-color: #2d5481;
 }
 
@@ -234,10 +243,153 @@ footer {
   margin-bottom: 0%;
 }
 
-/*RESPONSIVE*/
+/*RESPONSIVE para Celular*/
 
-@media screen and (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .column {
     flex-direction: column;
   }
-  
+  .header-container {
+    width:flex;
+    height: 40%;
+  }
+  #logo {
+    display: flex;
+    width: 120px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 5px;
+  }
+  h1 {
+    font-size: 12px;
+  }
+  .container-filter {
+    height:50%;
+  }
+  h2 {
+   font-size: 12px;
+   height: 15px;
+  }
+  label{
+    font-size: 70%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  select {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 100px;
+  }
+  .container-filter {
+    height: 250px;
+  }
+  .resultado{
+    letter-spacing: 2px;
+    font-size: 8px;
+    margin-left: 40px;
+    margin-bottom: 0%;
+  }
+p{
+  font-size: 10px;
+}
+.refrescar{
+  font-size: 8px;
+  border-radius: 10%;
+  height: 18px;
+  float: right;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  margin-right: 5px;
+}
+/*tarjetas pokemon*/
+.content-card {
+  border: 5px solid #ECBC09;
+  display: flex;
+  padding: 3%;
+  margin: 1.5%;
+  background-color: #417DC1;
+  width: 70px;
+  height: 120px;
+}
+
+.pokemon-img {
+  border: 3px solid #ECBC09;
+  display: flex;
+  padding: 0%;
+  justify-content: center;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  margin: 0%;
+  border-radius: 5%;
+}
+
+.pokemon-name {
+  display: flex;
+  color: #B1E46B;
+  font-size: 12px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 3%;
+}
+
+.pokemon-type {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 11px;
+
+}
+
+.pokemon-num {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 12px;
+
+}
+
+}
+
+/*RESPONSIVE para iPad*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-container {
+    width:flex;
+    height: 60%;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  p{
+    font-size: 15px;
+}
+.container-filter {
+  height:70%;
+}
+h2 {
+ font-size: 20px;
+ height: 20px;
+}
+label{
+  font-size: 18px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.refrescar{
+  font-size: 12px;
+  border-radius: 10%;
+  height: 25px;
+  float: right;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  margin-right: 5px;
+}
+#logo {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+}

@@ -1,5 +1,5 @@
-import data from './data/pokemon/pokemon.js';
-import {selecType, resistantSelect, weaknessesSelect, sortAZ, sortZA} from './data.js';
+import data from '../src/data/pokemon/pokemon.js';
+import {selecType, resistantSelect, weaknessesSelect, sortAZ, sortZA, calculoType} from './data.js';
 
 //Mostramos las tarjetas de pokemon en pantalla
 function showOnCards(data) {
@@ -18,20 +18,22 @@ function showOnCards(data) {
 }
 showOnCards(data.pokemon);
 
+
 //filtrado por typo de pokemon
 const typeselect = document.getElementById("type");
 typeselect.addEventListener("change", () => {
   const selectvalue = typeselect.value;
   const dataFiltered = selecType(data.pokemon, selectvalue);
-  //console.log(dataFiltered);
+  // console.log(dataFiltered);
   showOnCards(dataFiltered);
   //Calcculo del % por tipo
   const countDataFiltered= dataFiltered.length;
   //console.log(countDataFiltered);
-  const calculoType= (countDataFiltered*100)/(251);
+  const porcentajeType =  calculoType(countDataFiltered);
+  // console.log(porcentajeType);
+  document.getElementById("resultado").innerHTML = porcentajeType.toFixed(2) + ("% del total de pokemon");
   //console.log(calculoType);
-  document.getElementById("resultado").innerHTML = calculoType.toFixed(2) + ("% del total de pokemon");
-  //console.log(calculoType);
+  return porcentajeType,countDataFiltered;
 });
 
 //filtrado por resistant (resistencia)
@@ -70,7 +72,7 @@ orderselectaz.addEventListener("change", (e) =>
   if (e.target.value==="A-Z") {
     
     const dataOrderedaz = sortAZ(data.pokemon);
-    console.log(dataOrderedaz);
+    //console.log(dataOrderedaz);
     showOnCards(dataOrderedaz);
   }
   else {
@@ -82,4 +84,7 @@ orderselectaz.addEventListener("change", (e) =>
 });
 
 
-
+//const refresh = document.getElementById("type");
+//refresh.addEventListener('click', _ => {
+//  location.reload();
+//})
