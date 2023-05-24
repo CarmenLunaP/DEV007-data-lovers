@@ -46,7 +46,7 @@ selectResistant.addEventListener("change", () => {
   //Calcculo del % por resistant
   const countDataFiltered2= dataFiltered2.length
   const calculoResistant= (countDataFiltered2*100)/(251);
-  document.getElementById("resultadoResistant").innerHTML = calculoResistant + ("% del total de pokemon");
+  document.getElementById("resultadoResistant").innerHTML = Math.round(calculoResistant) + ("% del total de pokemon");
   //console.log(calculoResistant);
 });
 
@@ -60,7 +60,7 @@ selectweaknesses.addEventListener("change", () => {
   //Calculo del % por weaknesses
   const countDataFiltered3= dataFiltered3.length
   const calculoWeaknesses= (countDataFiltered3*100)/(251);
-  document.getElementById("resultadoWeaknesses").innerHTML = calculoWeaknesses + ("% del total de pokemon");
+  document.getElementById("resultadoWeaknesses").innerHTML = Math.round(calculoWeaknesses) + ("% del total de pokemon");
   //console.log(calculoWeaknesses);
 });
 
