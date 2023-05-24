@@ -133,14 +133,11 @@ p {
    }
    
    .contenRefrescar{
-   
     flex: 25%;
     float: right;
     flex-wrap: wrap;
-    
   }
    
-
 /*Contenedor del cuerpo de la página filter y tarjetas*/
 .container {
   flex: 100%;
@@ -207,21 +204,11 @@ select {
 	overflow-y: scroll;
 }
 
-
 .container-cards.column {
   flex: 20%;
   display: flex;
   max-width: 25%;
   padding: 0 4px;
-}
-
-/*fotter*/
-#imagen-footer {
-  float: right;
-  margin-right: 20px;
-  margin-top: 15PX;
-  vertical-align: middle;
-
 }
 
 h3 {
@@ -233,15 +220,6 @@ h3 {
   vertical-align: bottom;
 }
 
-footer {
-  padding: 0%;
-  size: 0px;
-  box-sizing: border-box;
-  height:20px;
-  width: 100%;
-  position: absolute;
-  margin-bottom: 0%;
-}
 
 /*RESPONSIVE para Celular*/
 

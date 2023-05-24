@@ -259,7 +259,7 @@ implementadas en el archivo `data.js`.
   lines y branches.
 * [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
 * [x] Incluye historias de usuario en `README.md`.
-* [x ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+* [x] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
 * [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
