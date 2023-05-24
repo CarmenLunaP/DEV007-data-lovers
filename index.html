@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Pokemon Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<header>
+  <div class="header-container">
+    <picture>
+      <img class="logo" src="./Imagen/Logo.jpg" id="logo" alt="logo" height="100" width="200">
+    </picture>
+    <div class="letter">
+      <h1>Atrapa la emoción en cada imagen <br>"Bienvenido a Pokemon Gallery"</h1>
+    </div>
+  </div>
+</header>
+
+<body>
+  <div class="welcome">
+    <p>Aquí encontrarás una colección increíble de imágenes y recursos de tus personajes favoritos de Pokemon. ¡Explora
+      y diviértete!</p>
+  </div>
+
+  <div class="container">
+    <div class="container-filter">
+      <h2>Filtra tus Pokemon</h2>
+      <div class="contenRefrescar">
+        <input class="refrescar" type="button" value="Limpiar" onclick="location.reload()" />
+      </div>
+      <label for="type1">Tipo de pokemon:</label><br>
+      <select name="type" id="type">
+        <option value="-----">-----</option>
+        <option value="normal">Normal</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Poison">Poison</option>
+        <option value="Ground">Ground</option>
+        <option value="Rock">Rock</option>
+        <option value="Bug">Bug</option>
+        <option value="Ghost">Ghost</option>
+        <option value="Steel">Steel</option>
+        <option value="Fire">Fire</option>
+        <option value="Water">Water</option>
+        <option value="Grass">Grass</option>
+        <option value="Electric">Electric</option>
+        <option value="Psychic">Psychic</option>
+        <option value="Ice">Ice</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Dark">Dark</option>
+        <option value="Fairy">Fairy</option>
+      </select> <br>
+      <div class="resultado" id="resultado"></div>
+      <label for="resistant">Resistencia:</label><br>
+      <select name="resistant" id="resistant">
+        <option value="-----">-----</option>
+        <option value="normal">Normal</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Flying">Flying</option>
+        <option value="Poison">Poison</option>
+        <option value="Ground">Ground</option>
+        <option value="Rock">Rock</option>
+        <option value="Bug">Bug</option>
+        <option value="Ghost">Ghost</option>
+        <option value="Steel">Steel</option>
+        <option value="Fire">Fire</option>
+        <option value="Water">Water</option>
+        <option value="Grass">Grass</option>
+        <option value="Electric">Electric</option>
+        <option value="Psychic">Psychic</option>
+        <option value="Ice">Ice</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Dark">Dark</option>
+        <option value="Fairy">Fairy</option>
+      </select> <br>
+      <div class="resultado" id="resultadoResistant"></div>
+      <label for="weaknesses">Debilidad:</label><br>
+      <select name="weaknesses" id="weaknesses">
+        <option value="-----">-----</option>
+        <option value="normal">Normal</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Flying">Flying</option>
+        <option value="Poison">Poison</option>
+        <option value="Ground">Ground</option>
+        <option value="Rock">Rock</option>
+        <option value="Bug">Bug</option>
+        <option value="Ghost">Ghost</option>
+        <option value="Steel">Steel</option>
+        <option value="Fire">Fire</option>
+        <option value="Water">Water</option>
+        <option value="Grass">Grass</option>
+        <option value="Electric">Electric</option>
+        <option value="Psychic">Psychic</option>
+        <option value="Ice">Ice</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Dark">Dark</option>
+        <option value="Fairy">Fairy</option>
+      </select>
+      <div class="resultado" id="resultadoWeaknesses"></div> <br>
+      <div>
+        <h2>Ordena tus Pokemon</h2>
+        <label for="Order">Ordena:</label><br>
+        <select name="name" id="name">
+          <option value="-----">-----</option>
+          <option value="A-Z">A-Z</option>
+          <option value="Z-A">Z-A</option>
+        </select>
+      </div>
+    </div>
+    <div id="pokemon-cards" class="container-cards">
+    </div>
+  </div>
+  <script src="main.js" type="module"></script>
+  <h3>© Creado por:</h3>
+  <h3>Analía Klein <br>Carmen Luna</h3>
+
+</body>
+
+</html>
