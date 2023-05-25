@@ -1,7 +1,7 @@
 /*import { example, anotherExample } from '../src/data.js';*/
 //import data from '../src/data/pokemon/pokemon.js';
-import {selecType, calculoType, resistantSelect, sortAZ, sortZA} from '../src/data.js';
-import pokemon from '../src/data/pokemon/pokemon.js';
+import {selecType, calculoType, resistantSelect, sortAZ, sortZA} from './src/data.js';
+import pokemon from './src/data/pokemon/pokemon.js';
 
 
 //Test Filtro por especie:

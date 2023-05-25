@@ -1,4 +1,4 @@
-import data from '../data/pokemon/pokemon.js';
+import data from './data/pokemon/pokemon.js';
 import {selecType, resistantSelect, weaknessesSelect, sortAZ, sortZA, calculoType} from './data.js';
 
 //Mostramos las tarjetas de pokemon en pantalla
